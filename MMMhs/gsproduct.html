@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>凑单品</title>
+    <!--引入文件-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/gsproduct.css">
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src='lib/flexible/flexible.js'></script>
+    <script src='lib/flexible/flexible_css.js'></script>
+    <script src="lib/art/template.js"></script>
+</head>
+<body>
+     <!--头部-->
+    <header class="clearfix">
+        <div class="back fl">
+            <a href="index.html" class="iconfont">&#xe615;</a>
+        </div>
+        <h1>  			
+             凑单品
+        </h1>
+        <div class="right fr">
+            <a href='javascript:;'><img src="images/header_app.png"></a>
+        </div>
+    </header>
+    <!--导航栏-->
+    <div class="nav">
+        <div class="navWrap">
+            <ul class="clearfix">
+                <li class="w33"><a href='javascript:;'>京东</a></li>
+                <li class="w33"><a href='javascript:;'>华北</a></li>
+                <li class="w33"><a href='javascript:;'>全部价格</a></li>
+            </ul>
+            <div class="search">
+                <div class="search iconfont">&#xe61e;</div>
+            </div>
+        </div>
+        <!--商铺-->
+        <div class="shop shoping hide">
+            <ul>
+                <!--<li class="clearfix"><a href='javascript:;'>京东<span class="fr hide">✔</span></a></li>-->
+            </ul>
+        </div>
+        <!--区域-->
+        <div class="shop area hide">
+            <ul>
+                <!--<li class="clearfix"><a href='javascript:;'>华北（北京、山西等）<span class="fr hide">✔</span></a></li>-->
+            </ul>
+        </div>
+        <!--全部价格-->
+        <div class="shop allPrice hide">
+            <ul>
+                <li class="clearfix"><a href='javascript:;'>全部价格<span class="fr">✔</span></a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <!--产品列表-->
+    <div class="products">
+        <ul class="clearfix">
+            <!--<li class="product w50 fl">
+                <a href='javascript:;' class="wrap">
+                    <img src="images/eat.jpg">
+                    <p>廿一客(21cake)专用餐具 1人份(不单独配送)</p>
+                    <span>¥0.50</span>
+                </a>
+                <a href='javascript:;' class="go">去凑单</a>
+            </li>-->
+        </ul>
+    </div>
+
+
+    <!--底部-->
+    <div class="footer">
+        <div class="linkTool">
+            <div class="login fl"><a href="javascript:;">登录</a></div>
+            <div class="register fl"><a href='javascript:;'>注册</a></div>
+            <div class="toTop fl">
+                <a href='javascript:;'>
+                    <img src="images/top.jpg">
+                    返回顶部
+                </a>
+            </div>
+        </div>
+        <div class="appDload">
+            <span class="dload">手机APP下载</span>
+            <span class="mobile">慢慢买手机版</span>
+            <span class="info">--掌上比价平台</span>
+        </div>
+        <div class="url">m.manmanbuy.com</div>
+    </div>
+    
+</body>
+<!--模板引擎-->
+<!--店铺模板-->
+<script type="text/html" id="tplShoping">
+    {{each result}}
+    <li class="clearfix" shopId="{{$value.shopId}}"><a href='javascript:;'>{{$value.shopName}}<span class="fr hide">✔</span></a></li>    
+    {{/each}}
+</script>
+<!--区域模板-->
+<script type="text/html" id="tplArea">
+    {{each result}}
+    <li class="clearfix" areaId="{{$value.areaId}}"><a href='javascript:;'>{{$value.areaName}}<span class="fr hide">✔</span></a></li>
+    {{/each}}
+</script>
+<!--商品列表模板-->
+<script type="text/html" id="tplProducts">
+    {{each result}}
+    <li class="product w50 fl">
+        <a href='javascript:;' class="wrap">
+            <img src="{{$value.productImg}}">
+            <p>{{$value.productName}}</p>
+            <span>{{$value.productPrice}}</span>
+        </a>
+        <a href='javascript:;' class="go">去凑单</a>
+    </li>
+    {{/each}}
+</script>
+<script src="js/common.js"></script>
+<script src="js/gsproduct.js"></script>
+</html>

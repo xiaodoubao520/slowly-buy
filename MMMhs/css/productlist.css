@@ -1,0 +1,274 @@
+/*------------- S reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+@charset "utf-8";
+html {
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html * {
+  outline: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  /*设置所有的盒子的宽度以边框开始计算*/
+  -webkit-box-sizing: border-box;
+  /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+  box-sizing: border-box;
+}
+html,
+body {
+  background: #f7f7f7;
+  color: #5a5a5a;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  /*在移动端特殊的设置*/
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+ins,
+a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+a:hover {
+  color: #5a5a5a;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  /*特殊的属性定义  清除浏览器给input自带的样式*/
+  -webkit-appearance: none;
+  /*组件默认的样式空*/
+}
+/*------------- E  reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+/*------------- S common css  也就是我们公用的css -------------*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after,
+.clearfix::before {
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.w33 {
+  width: 33.3333%;
+}
+.w50 {
+  width: 50%;
+}
+.w25 {
+  width: 25%;
+}
+/*------------- E common css  也就是我们公用的css -------------*/
+.hide {
+  display: none;
+}
+/*-------------- S 字体图标库 -------------*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), url('../fonts/iconfont.woff') format('woff'), url('../fonts/iconfont.ttf') format('truetype'), url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.products .product {
+  height: 3.133255rem;
+  border-bottom: 0.026666rem solid #dbdbdb;
+  background: #fff;
+}
+.products .product a {
+  display: block;
+}
+.products .product .left {
+  width: 3.19992rem;
+  text-align: center;
+  padding-top: 0.26666rem;
+}
+.products .product .left img {
+  width: 2.6666rem;
+  height: 2.6666rem;
+}
+.products .product .right {
+  width: 6.79983rem;
+  padding-top: 0.39999rem;
+}
+.products .product .right p {
+  font-size: 14px;
+  color: #000;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+[data-dpr='2'] .products .product .right p {
+  font-size: 28px;
+}
+[data-dpr="3"] .products .product .right p {
+  font-size: 42px;
+}
+.products .product .right > span {
+  font-size: 18px;
+  color: #ea3900;
+}
+[data-dpr='2'] .products .product .right > span {
+  font-size: 36px;
+}
+[data-dpr="3"] .products .product .right > span {
+  font-size: 54px;
+}
+.products .product .right div {
+  margin-top: 0.13333rem;
+}
+.products .product .right div span {
+  color: #a1a1a1;
+}
+.paging {
+  padding-top: 0.26666rem;
+  height: 1.46663rem;
+  background: #fff;
+}
+.paging button {
+  width: 2.199945rem;
+  height: 0.93331rem;
+  background: #d9d9d9;
+  font-size: 14px;
+  color: #000;
+  border-radius: 0.13333rem;
+}
+[data-dpr='2'] .paging button {
+  font-size: 28px;
+}
+[data-dpr="3"] .paging button {
+  font-size: 42px;
+}
+.paging .last {
+  margin: 0 0.573319rem;
+}
+.paging .next {
+  margin-left: 0.573319rem;
+}
+.paging select {
+  margin: 0 0.573319rem;
+  width: 1.99995rem;
+  height: 0.93331rem;
+  border: 0.026666rem solid #b2b2b2;
+  font-size: 16px;
+  text-indent: 0.466655rem;
+}
+[data-dpr='2'] .paging select {
+  font-size: 32px;
+}
+[data-dpr="3"] .paging select {
+  font-size: 48px;
+}
+.paging select option {
+  text-align: center;
+  width: 1.99995rem;
+  height: 0.93331rem;
+  font-size: 16px;
+}
+[data-dpr='2'] .paging select option {
+  font-size: 32px;
+}
+[data-dpr="3"] .paging select option {
+  font-size: 48px;
+}

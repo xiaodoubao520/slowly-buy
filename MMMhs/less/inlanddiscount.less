@@ -1,0 +1,57 @@
+@import "base";
+// 产品列表
+.products{
+    background: #fff;
+    text-align: center;
+    ul{
+        li{
+            border-bottom: 2*@rem solid #efefef;
+            padding: 10*@rem 25*@rem;
+            height: 570*@rem;
+            position: relative;
+            a{
+                display: block;
+                img{
+                    width: 300*@rem;
+                    height: 300*@rem;
+                    margin-top: 33*@rem;
+                    margin-bottom: 20*@rem;
+                }
+                .title{
+                    .font-size(14);
+                    // height: 1rem;
+                    // line-height: 1.5;
+                    font-weight: 700;
+                    color:#000;
+                    text-align: left;
+                    word-break: break-all;
+                    display: -webkit-box;
+                    -webkit-line-clamp:2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                .price{
+                    text-align: left;
+                    color:#ff6c00;
+                    .font-size(14);
+                    line-height: 2;
+                    display: -webkit-box;
+                    -webkit-line-clamp:1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    position: absolute;
+                    bottom: 70*@rem;
+                }
+                .from{
+                    text-align: left;
+                    line-height: 2;
+                    position: absolute;
+                    bottom: 20*@rem;
+                }
+            }
+        }
+        li:nth-child(2n-1){
+            border-right: 2*@rem solid #efefef;
+        }
+    }
+}

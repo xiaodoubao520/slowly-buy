@@ -1,0 +1,306 @@
+/*------------- S reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+@charset "utf-8";
+html {
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html * {
+  outline: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  /*设置所有的盒子的宽度以边框开始计算*/
+  -webkit-box-sizing: border-box;
+  /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+  box-sizing: border-box;
+}
+html,
+body {
+  background: #f7f7f7;
+  color: #5a5a5a;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  /*在移动端特殊的设置*/
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+ins,
+a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+a:hover {
+  color: #5a5a5a;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  /*特殊的属性定义  清除浏览器给input自带的样式*/
+  -webkit-appearance: none;
+  /*组件默认的样式空*/
+}
+/*------------- E  reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+/*------------- S common css  也就是我们公用的css -------------*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after,
+.clearfix::before {
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.w33 {
+  width: 33.3333%;
+}
+.w50 {
+  width: 50%;
+}
+.w25 {
+  width: 25%;
+}
+/*------------- E common css  也就是我们公用的css -------------*/
+.hide {
+  display: none;
+}
+/*-------------- S 字体图标库 -------------*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), url('../fonts/iconfont.woff') format('woff'), url('../fonts/iconfont.ttf') format('truetype'), url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.showPro {
+  height: 6.733165rem;
+  background: #fff;
+  padding: 0.53332rem;
+  font-size: 17px;
+  text-align: center;
+  color: #000;
+  position: relative;
+}
+[data-dpr='2'] .showPro {
+  font-size: 34px;
+}
+[data-dpr="3"] .showPro {
+  font-size: 51px;
+}
+.showPro .pic img {
+  width: 4.466555rem;
+  height: 4.466555rem;
+}
+.showPro a {
+  width: 1.053307rem;
+  height: 1.053307rem;
+  position: absolute;
+  right: 0.66665rem;
+  bottom: 0.66665rem;
+}
+.showPro a img {
+  width: 100%;
+}
+.tab {
+  height: 0.93331rem;
+  background: #ffc526;
+  font-size: 15px;
+  color: #fff;
+  border-top: 0.026666rem solid #c64e00;
+  border-bottom: 0.026666rem solid #c64e00;
+  text-align: center;
+  line-height: 0.879978rem;
+}
+[data-dpr='2'] .tab {
+  font-size: 30px;
+}
+[data-dpr="3"] .tab {
+  font-size: 45px;
+}
+.tab li:nth-child(1) {
+  background: #ff9d1e;
+  border-right: 0.026666rem solid #c64e00;
+}
+.tab li:nth-child(2) {
+  border-right: 0.026666rem solid #c64e00;
+}
+.compareBuy .top {
+  height: 1.19997rem;
+  line-height: 1.19997rem;
+  border-bottom: 0.026666rem solid #b4b4b4;
+  font-size: 16px;
+  color: #000;
+}
+[data-dpr='2'] .compareBuy .top {
+  font-size: 32px;
+}
+[data-dpr="3"] .compareBuy .top {
+  font-size: 48px;
+}
+.compareBuy .top a {
+  display: block;
+  float: left;
+  text-align: center;
+  padding-left: 0.199995rem;
+}
+.compareBuy .top a img {
+  vertical-align: middle;
+  width: 0.426656rem;
+  height: 0.426656rem;
+}
+.compareBuy .top a span {
+  color: #000;
+}
+.compareBuy .top > span {
+  float: right;
+  display: block;
+  color: #d10311;
+  margin-right: 0.39999rem;
+}
+.compareBuy .top button {
+  float: right;
+  margin-top: 0.333325rem;
+  margin-right: 0.13333rem;
+  width: 1.46663rem;
+  height: 0.613318rem;
+  background: #ff5500;
+  color: #fff;
+  font-size: 15px;
+  border: 0.026666rem solid #ff3b00;
+  border-radius: 0.106664rem;
+}
+[data-dpr='2'] .compareBuy .top button {
+  font-size: 30px;
+}
+[data-dpr="3"] .compareBuy .top button {
+  font-size: 45px;
+}
+.compareBuy .tip {
+  margin-top: 0.26666rem;
+  padding: 0 0.26666rem;
+  line-height: 4 0rem;
+  border-bottom: 0.106664rem solid #747474;
+  padding-bottom: 0.466655rem;
+}
+.appraise .header {
+  height: 0.866645rem;
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  background: #dbdbdb;
+  border-bottom: 0.026666rem solid #d9d9d9;
+  line-height: 0.866645rem;
+  margin-top: 0.053332rem;
+}
+[data-dpr='2'] .appraise .header {
+  font-size: 28px;
+}
+[data-dpr="3"] .appraise .header {
+  font-size: 42px;
+}
+.appraise .items .item {
+  line-height: 0.53332rem;
+  padding: 0.439989rem 0.239994rem 0.13333rem 0.239994rem;
+  border-bottom: 0.026666rem solid #d0d0d0;
+}
+.appraise .items .item .from {
+  text-align: right;
+}

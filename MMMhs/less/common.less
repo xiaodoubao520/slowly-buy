@@ -1,0 +1,153 @@
+@import "base";
+//头部样式 
+header {
+    position: relative;
+    background: @main-color;
+    width: 100%;
+    height: 97*@rem;
+    border-bottom: 1px solid #ff7502;
+    .back{
+        position: absolute;
+        left: 30*@rem;
+        a{
+            display: block;
+            .font-size(20);
+            line-height: 97*@rem;
+            color:#fff;
+        }
+    }
+    h1{
+        color: #fff;
+        text-align: center;
+        line-height: 97*@rem;
+        .font-size(20);
+        text-align: center;
+    }
+    .left {
+        width: 370*@rem;
+        height: 50*@rem;
+        margin-left: 34*@rem;
+        margin-top: 23*@rem;
+        img {
+            width: 100%;
+        }
+    }
+    .right {
+        width: 68*@rem;
+        height: 68*@rem;
+        margin-right: 13*@rem;
+        margin-top: 13*@rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        img{
+            width: 100%;
+        }
+    }
+}
+//搜索框
+.search{
+    padding: 20*@rem;
+    background: #fff;
+    .search-bar{
+        width: 75%;
+        input{
+            width: 100%;
+            height: 60*@rem;
+            background:#f1f1f1;
+            text-indent: 40*@rem;
+            .font-size(13);
+            border-radius: 30*@rem;
+        }
+    }
+    .button{
+        width: 25%;
+        padding-left: 20*@rem;
+        button{
+            width: 100%;            
+            height: 60*@rem;
+            border: 1px solid #ff7502;
+            border-radius: 30*@rem;
+            background: @main-color;
+            color: #fff;
+            .font-size(16);
+        }
+    }
+}
+//底部
+.footer{
+    .linkTool{
+        border-top: 1px solid #b8b8b8;
+        border-bottom: 1px solid #b8b8b8;
+        margin-top: 50*@rem;
+        height: 66*@rem;
+        text-align: center;
+        .font-size(14);
+        a{
+            display: block;
+            padding-top: 15*@rem;
+        }
+        .login{
+            width:225*@rem;
+            height: 66*@rem;
+            border-right: 1px solid #b8b8b8;
+        }
+        .register{
+            width:225*@rem;
+            height: 66*@rem;
+            border-right: 1px solid #b8b8b8;
+            
+        }
+        .toTop{
+            width: 300*@rem;
+            height: 66*@rem;
+            img{
+                width: 30*@rem;
+                height: 30*@rem;
+            }
+        }
+    }
+    .appDload{
+        text-align: center;
+        margin-top: 33*@rem;
+        .dload{
+            color: red;
+        }
+        .mobile{
+            color: #000;
+        }
+    }
+    .url{
+        text-align: center;
+        padding: 11*@rem 0 35*@rem;
+    }
+}
+
+// 三级菜单
+.menu{
+    height: 75*@rem;
+    line-height: 75*@rem;
+    .font-size(14);
+    color:#000;
+    border-top:2*@rem solid #ccc;
+    border-bottom:2*@rem solid #ccc;
+    background-image: linear-gradient(to bottom,#fff,#dbdbdb);
+    .left{
+        padding-left:16*@rem;
+        a{
+            display: block;
+            float: left;
+        }
+    }
+    .right{
+        button{
+            .font-size(14);
+            width: 125*@rem;
+            height: 55*@rem;
+            border-radius: 12   *@rem;
+            margin-right: 16*@rem;
+            background-image: linear-gradient(to bottom,#dbdbdb,#fff);
+            
+        }
+    }
+}

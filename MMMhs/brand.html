@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>品牌排行榜</title>
+    <!--引入文件-->
+    <link rel="stylesheet" href="css/brand.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src='lib/flexible/flexible.js'></script>
+    <script src='lib/flexible/flexible_css.js'></script>
+    <script src="lib/art/template.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <header>
+        <div class="left fl">
+            <a href='index.html'><img src="images/header_logo.png"></a>
+        </div>
+        <div class="right fr">
+            <a href='javascript:;'><img src="images/header_app.png"></a>
+        </div>
+    </header>
+    <!--搜索框-->
+    <div class="search clearfix">
+        <div class="search-bar fl">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="button fr">
+            <button>搜索</button>
+        </div>
+    </div>
+    <!--三级菜单-->
+    <div class="menu clearfix">
+        <div class="fl left threeMenu">
+            <a href="index.html">首页＞</a>
+            <a href="category.html">全部分类＞</a>
+        </div>
+    </div>
+    <!--标题-->
+    <div class="header">平板电视哪个牌子好</div>
+    <!--排行榜-->
+    <div class="rankingList">
+        <ul>
+            <!--<li>
+                <a href='productlist.html?categoryid=3&pageid=1' class="clearfix">
+                    <span class="fl">1</span>
+                    <div class="info fl">
+                        <div class="title">三星平板电视</div>
+                        <div class="sales">30天全网销售：325506件</div>
+                    </div>
+                    <em class="fr">〉</em>
+                </a>
+            </li>-->
+        </ul>
+    </div>
+    <!--标题-->
+    <div class="header">平板电视产品销量排行</div>
+    <!--销量排行-->
+    <div class="products clearfix">
+        <!--<div class="product">
+            <div class="left fl">
+                <img src="images/tv.png" alt="">
+            </div>
+            <div class="right fr">
+                <p>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</p>
+                <span>￥1999.00</span>
+                <div><span>报价(6) </span><span>评论(2286)</span></div>
+            </div>
+        </div>-->
+    </div>
+    <!--标题-->
+    <div class="header">平板电视最新评论</div>
+    <!--最新评论-->
+    <div class="comments">
+        <!--<div class="comment">
+            <div class="info clearfix">
+                <div class="pic fl">
+                    <img src="images/categorylist.jpg">
+                </div>
+                <div class="title">乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</div>
+            </div>
+            <div class="content">
+                <div class="top clearfix">
+                    <span class="name fl">g***n:    </span>
+                    <span class="star fl">★★★★★</span>
+                    <span class="fr time">2016/2/18</span>
+                </div>
+                <div class="disc">外观：精工细作，颜值再度提高作为一台55寸的大电视，乐视X55正面看起来非常大气，配合Letv独有的造型独特的云底座，整体视觉观感出色。会发光的Letv标识被放置在了机器的左下角，标识右侧，安排有一个圆形的遥控器信号接收区域。乐视X55的边框处理相当讲究，采用了时下智能手机产品上常见的倒角工艺，配合表面的金属拉丝，展现出产品细节上的用心。</div>
+            </div>
+        </div>-->
+    </div>
+
+    <!--底部-->
+    <div class="footer">
+        <div class="linkTool">
+            <div class="login fl"><a href="javascript:;">登录</a></div>
+            <div class="register fl"><a href='javascript:;'>注册</a></div>
+            <div class="toTop fl">
+                <a href='javascript:;'>
+                    <img src="images/top.jpg">
+                    返回顶部
+                </a>
+            </div>
+        </div>
+        <div class="appDload">
+            <span class="dload">手机APP下载</span>
+            <span class="mobile">慢慢买手机版</span>
+            <span class="info">--掌上比价平台</span>
+        </div>
+        <div class="url">m.manmanbuy.com</div>
+    </div>
+</body>
+<!--模板引擎-->
+<!--排行榜模板-->
+<script type="text/html" id="tplRankingList">
+    {{each result}}
+    <li>
+        <a href='productlist.html?categoryid={{$value.categoryId}}&pageid=1' class="clearfix">
+            <span class="fl">1</span>
+            <div class="info fl">
+                <div class="title">{{$value.brandName}}</div>
+                <div class="sales">{{$value.brandInfo}}</div>
+            </div>
+            <em class="fr">〉</em>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<!--商品列表模板-->
+<script type="text/html" id="tplProducts">
+    {{each result}}
+    <div class="product">
+        <a href='bijia.html?productid={{$value.productId}}' class="clearfix">
+            <div class="left fl">
+                {{#$value.productImg}}
+            </div>
+            <div class="right fr">
+                <p>{{$value.productName}}</p>
+                <span>{{$value.productPrice}}</span>
+                <div><span>{{$value.productQuote}} </span><span>{{$value.productCom}}</span></div>
+            </div>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<!--最新评论模板-->
+<script type="text/html" id="tplComments">
+    {{each result}}
+    <div class="comment">
+        <div class="info clearfix">
+            <div class="pic fl">
+                <!--<img src="images/categorylist.jpg">-->
+            </div>
+            <div class="title">乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</div>
+        </div>
+        <div class="content">
+            <div class="top clearfix">
+                <span class="name fl">{{$value.comName}}:</span>
+                <span class="star fl">★★★★★</span>
+                <span class="fr time">{{$value.comTime}}</span>
+            </div>
+            <div class="disc">{{$value.comContent}}</div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<script src="js/common.js"></script>
+<script src="js/brand.js"></script>
+</html>

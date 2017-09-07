@@ -1,0 +1,149 @@
+@import "base";
+// 产品介绍
+.proDisc{
+    background: #fff;
+    padding: 0 20*@rem;
+    line-height: 1.5;
+    h3{
+        .font-size(18);
+        margin: 10*@rem 0 5*@rem 0;
+        font-weight: 800;
+        color: #5a5a5a;
+    }
+    .info{
+        span{
+         .font-size(12);
+        }
+    }
+    #disstorck{
+        width: 275*@rem;
+        padding: 0 20*@rem;
+        margin-left: 225*@rem;
+        box-shadow: 0 5*@rem 10*@rem #ccc;
+        border-radius: 10*@rem;
+        margin-top:50*@rem;
+        .font-size(12);
+        li{
+            padding: 0 20*@rem;
+            border-bottom: 3*@rem dashed #ccc;
+            line-height: 2;
+            span{
+                color: #000;
+            }
+            strong{
+                color:#f27b04;
+                float: right;
+            }
+        }
+    }
+    .fonts{
+        text-align: center;
+         img:nth-child(1){
+            vertical-align: middle;
+            width: 270*@rem;
+            margin-bottom: 30*@rem;
+            float: right;
+        }
+        p{
+            text-align: left;
+        }
+        img:nth-child(4){
+            width: 100%;
+            margin-top: 20*@rem;
+        }
+    }
+}
+//点击购买
+.buy{
+    background: #fff;
+    padding-top: 40*@rem;
+    padding-left: 40*@rem;
+    a{
+        display: block;
+        width:668*@rem;
+        height: 60*@rem;
+        background: #ff9000;
+        border: 2*@rem solid #ff7c03;
+        border-radius: 10*@rem;
+        line-height: 56*@rem;
+        color: #fff;
+        .font-size(14);
+        text-align: center;
+    }
+}
+//二维码
+.weixinQRcode{
+    text-align: center;
+    padding-top: 85*@rem;
+    background: #fff;
+}
+//评论
+.comments{
+    background: #fff;
+    padding: 55*@rem 20*@rem 0;
+    //发表评论
+    .tit{
+        .font-size(16);
+        color: #000;
+    }
+    .reply{
+        position: relative;
+        .form{
+            textarea{
+                width: 690*@rem;
+                height: 224*@rem;
+                border: 2*@rem solid #ccc;
+                margin: 15*@rem 0 10*@rem 10*@rem;
+            }
+        }
+        .ctrl{
+            position: absolute;
+            left: 500*@rem;
+            bottom: 20*@rem;
+            input{
+                width: 200*@rem;
+                height: 80*@rem;
+                background: #ff841d;
+                color: #fff;
+                .font-size(16);
+            }
+        }
+    }
+    .list{
+        ul{
+            li{
+                margin:50*@rem 0;
+                overflow: hidden;
+                .userimg{
+                    float: left;
+                    border-radius: 40*@rem;
+                    overflow: hidden;
+                    margin-left: 20*@rem;
+                    img{
+                            width: 80*@rem;
+                        height: 80*@rem;
+                    }
+                }
+                .con{
+                    float:left;
+                    margin-left: 30*@rem;
+                    width: 550*@rem;
+                    .name{
+                        .username{
+                            float: left;
+                            color:#5997c0;
+                        }
+                        .time{
+                            float: right;
+                        }
+                    }
+                    .content{
+                        .font-size(15);
+                        color:#000;
+                        line-height: 2;
+                    }
+                }
+            }
+        }
+    }
+}

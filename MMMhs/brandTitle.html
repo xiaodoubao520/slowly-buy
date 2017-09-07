@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>品牌大全</title>
+    <!--引入文件-->
+    <link rel="stylesheet" href="css/brandTitle.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src='lib/flexible/flexible.js'></script>
+    <script src='lib/flexible/flexible_css.js'></script>
+    <script src="lib/art/template.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <header>
+        <div class="left fl">
+            <a href='index.html'><img src="images/header_logo.png"></a>
+        </div>
+        <div class="right fr">
+            <a href='javascript:;'><img src="images/header_app.png"></a>
+        </div>
+    </header>
+    <!--搜索框-->
+    <div class="search clearfix">
+        <div class="search-bar fl">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="button fr">
+            <button>搜索</button>
+        </div>
+    </div>
+    <!--三级菜单-->
+    <div class="menu clearfix">
+        <div class="fl left threeMenu">
+            <a href="index.html">首页＞</a>
+            <a href="category.html">全部分类＞</a>
+        </div>
+    </div>
+    <!--热门品牌排行-->
+    <div class="hotBrand">
+        <div class="header">热门品牌排行</div>
+        <div class="brands">
+            <ul>
+                <!--<li class="clearfix">
+                    <span>平板电视十大品牌</span><span class="fr down">﹀</span>
+                </li>-->
+            </ul>
+        </div>
+    </div>
+
+    <!--底部-->
+    <div class="footer">
+        <div class="linkTool">
+            <div class="login fl"><a href="javascript:;">登录</a></div>
+            <div class="register fl"><a href='javascript:;'>注册</a></div>
+            <div class="toTop fl">
+                <a href='javascript:;'>
+                    <img src="images/top.jpg">
+                    返回顶部
+                </a>
+            </div>
+        </div>
+        <div class="appDload">
+            <span class="dload">手机APP下载</span>
+            <span class="mobile">慢慢买手机版</span>
+            <span class="info">--掌上比价平台</span>
+        </div>
+        <div class="url">m.manmanbuy.com</div>
+    </div>
+</body>
+<!--模板渲染-->
+<!--热门品牌排行模板-->
+<script type="text/html" id="tplBrands">
+    {{each result}}
+    <li class="clearfix">
+        <a href='brand.html?brandtitleid={{$value.brandTitleId}}' categoryId={{$value.categoryId}}>
+            <span>{{$value.brandTitle}}</span><span class="fr down">﹀</span>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script src="js/common.js"></script>
+<script src="js/brandTitle.js"></script>
+</html>

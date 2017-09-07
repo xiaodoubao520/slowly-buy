@@ -1,0 +1,32 @@
+@import "base";
+.category{
+    border: 2*@rem solid #c7c7c7;
+    border-radius: 15*@rem;
+    .category-title{
+        //position: relative;
+        height: 80*@rem;
+        background:url(../images/arrow1.gif) right center no-reapeat;
+        //background-color: #ededed;
+        border-bottom:  2*@rem solid #c7c7c7;
+        text-indent: 35*@rem;
+        line-height: 80*@rem;
+        .font-size(16);
+        font-weight: bold;
+    }
+    .items{
+        .item{
+            height: 80*@rem;
+            background: #f9f9f9;
+            border-right: 2*@rem solid #c7c7c7;
+            border-bottom: 2*@rem solid #c7c7c7;
+            text-align: center;
+            line-height: 80*@rem;
+            a{
+                display: block;
+            }
+        }
+        .item:nth-child(3n){
+            border-right: none;
+        }
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品优惠券</title>
+    <!--引入文件-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/couponproduct.css">
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src='lib/flexible/flexible.js'></script>
+    <script src='lib/flexible/flexible_css.js'></script>
+    <script src="lib/art/template.js"></script>
+</head>
+<body>
+     <!--头部-->
+    <header class="clearfix">
+        <div class="back fl">
+            <a href="coupon.html" class="iconfont">&#xe615;</a>
+        </div>
+        <h1>  			
+             商品优惠券
+        </h1>
+        <div class="right fr">
+            <a href='javascript:;'><img src="images/header_app.png"></a>
+        </div>
+    </header>
+    <!--头部提示信息-->
+    <div class="tip">
+            --点餐前出示手机中的优惠券，即可享受优惠--
+    </div>
+    <!--优惠券列表-->
+    <div class="couponList">
+        <ul>
+            <!--<li class="clearfix">
+                <div class="pic fl">
+                    <img src="images/coupon.jpg">
+                </div>
+                <div class="info fl">
+                    <p class="title">C27  两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</p>
+                    <p class="price">￥ 28</p><br/>
+                    <p class="indate">有效期至10月31日</p>
+                </div>
+            </li>-->
+        </ul>
+    </div>
+    <!--遮罩层-->
+    <!--<div class="wrap hide">
+        <img src="images/coupon.jpg">
+        <i class="leftArrow"><</i>
+        <i class="rightArrow">></i>
+    </div>-->
+    <!--底部-->
+    <div class="footer">
+        <div class="linkTool">
+            <div class="login fl"><a href="javascript:;">登录</a></div>
+            <div class="register fl"><a href='javascript:;'>注册</a></div>
+            <div class="toTop fl">
+                <a href='javascript:;'>
+                    <img src="images/top.jpg">
+                    返回顶部
+                </a>
+            </div>
+        </div>
+        <div class="appDload">
+            <span class="dload">手机APP下载</span>
+            <span class="mobile">慢慢买手机版</span>
+            <span class="info">--掌上比价平台</span>
+        </div>
+        <div class="url">m.manmanbuy.com</div>
+    </div>
+    
+</body>
+<!--模板引擎-->
+<!--优惠券列表模板-->
+<script type="text/html" id="tplCouponList">
+    {{each result}}
+    <li class="clearfix">
+        <div class="pic fl">
+            {{#$value.couponProductImg}}
+        </div>
+        <div class="info fl">
+            <p class="title">{{$value.couponProductName}}</p>
+            <p class="price">{{$value.couponProductPrice}}</p>
+            <p class="indate">{{$value.couponProductTime}}</p>
+        </div>
+        <div class="wrap hide" couponProductId={{$value.couponProductId}}>
+            {{#$value.couponProductImg}}
+            <i class="leftArrow"><</i>
+            <i class="rightArrow">></i>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<script src="js/common.js"></script>
+<script src="js/couponproduct.js"></script>
+</html>

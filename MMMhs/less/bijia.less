@@ -1,0 +1,118 @@
+@import "base";  
+//产品展示
+.showPro{
+    height: 505*@rem;
+    background: #fff;
+    padding: 40*@rem;
+    .font-size(17);
+    text-align: center;
+    color: #000;
+    position: relative;
+    .pic{
+        img{
+            width: 335*@rem;
+            height: 335*@rem;
+        }
+    }
+    a{
+        width: 79*@rem;
+        height: 79*@rem;
+        position: absolute;
+        right: 50*@rem;
+        bottom:50*@rem;
+        img{
+            width: 100%;
+        }
+    }
+}
+//比价功能栏
+.tab{
+    height: 70*@rem;
+    background: #ffc526;
+    .font-size(15);
+    color: #fff;
+    border-top: 2*@rem solid #c64e00;
+    border-bottom: 2*@rem solid #c64e00;
+    text-align: center;
+    line-height: 66*@rem;
+    li:nth-child(1){
+        background: #ff9d1e;
+        border-right: 2*@rem solid #c64e00;
+    }
+    li:nth-child(2){
+        border-right: 2*@rem solid #c64e00;
+    }
+}
+//比价购买
+.compareBuy{
+    .top{
+        height: 90*@rem;
+        line-height: 90*@rem;
+        border-bottom:2*@rem solid #b4b4b4;
+        .font-size(16);
+        color:#000;
+        a{
+            display: block;
+            float: left;
+            text-align: center;
+            padding-left: 15*@rem;
+            img{
+                vertical-align: middle;
+                width:32*@rem;
+                height: 32*@rem;
+            }
+            span{
+                color: #000;
+            }
+        }
+        >span{
+            float:right;
+            display: block;
+            color: #d10311;
+            margin-right: 30*@rem;
+        }
+        button{
+            float: right;
+            margin-top: 25*@rem;
+            margin-right: 10*@rem;
+            width: 110*@rem;
+            height: 46*@rem;
+            background: #ff5500;
+            color: #fff;
+            .font-size(15);
+            border: 2*@rem solid #ff3b00;
+            border-radius: 8*@rem;
+        }
+    }
+    .tip{
+        margin-top: 20*@rem;
+        padding: 0 20*@rem;
+        line-height: 4  0*@rem;
+        border-bottom: 8*@rem solid #747474;
+        padding-bottom: 35*@rem;
+    }
+}
+//网友评价
+.appraise{
+    .header{
+        height: 65*@rem;
+        text-align: center;
+        .font-size(14);
+        color:#000;
+        background: #dbdbdb;
+        border-bottom:2*@rem solid #d9d9d9;
+        line-height: 65*@rem;
+        margin-top: 4*@rem;
+    }
+    .items{
+        .item{
+            line-height: 40*@rem;
+            padding: 33*@rem 18*@rem 10*@rem 18*@rem;
+            border-bottom: 2*@rem solid #d0d0d0;
+            .from{
+                text-align: right;
+            }
+        }
+    }
+
+}

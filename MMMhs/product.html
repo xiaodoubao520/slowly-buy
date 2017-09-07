@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国内折扣</title>
+    <!--引入文件-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/product.css">
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src='lib/flexible/flexible.js'></script>
+    <script src='lib/flexible/flexible_css.js'></script>
+    <script src="lib/art/template.js"></script>
+</head>
+<body>
+     <!--头部-->
+    <header class="clearfix">
+        <div class="back fl">
+            <a href="moneyctrl.html" class="iconfont">&#xe615;</a>
+        </div>
+        <h1>   			
+            国内折扣
+        </h1>
+        <div class="right fr">
+            <a href='javascript:;'><img src="images/header_app.png"></a>
+        </div>
+    </header>
+    <!--产品介绍-->
+    <div class="proDisc">
+        <!--<h3>
+            移动端凑单品：海天 鲜味 生抽 1.28L
+        </h3>
+        <div class="info">
+            <span>京东商城 </span>
+            <span>10-25 14:10 </span>
+            <span>小编烟火 </span>
+            <span>/ 慢慢买</span>
+        </div>
+        <div class="fonts">
+            <img src="images/oil.jpg" class="fr small">
+            <p>海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。</p>
+            <p>目前京东商城移动端售价10.9元，不错的凑单品，刚需可入，规格1.28L。</p>
+            <img src="images/oil.jpg" class="big">
+        </div>-->
+    </div>
+    <div class="buy">
+        <a href='javascript:;'>点击购买</a>
+    </div>
+    <!--二维码-->
+    <div class="weixinQRcode">
+        <img src="images/mmbweixin2.png">
+    </div>
+    <!--评论区-->
+    <div class="comments">
+        
+    </div>
+
+    <!--底部-->
+    <div class="footer">
+        <div class="linkTool">
+            <div class="login fl"><a href="javascript:;">登录</a></div>
+            <div class="register fl"><a href='javascript:;'>注册</a></div>
+            <div class="toTop fl">
+                <a href='javascript:;'>
+                    <img src="images/top.jpg">
+                    返回顶部
+                </a>
+            </div>
+        </div>
+        <div class="appDload">
+            <span class="dload">手机APP下载</span>
+            <span class="mobile">慢慢买手机版</span>
+            <span class="info">--掌上比价平台</span>
+        </div>
+        <div class="url">m.manmanbuy.com</div>
+    </div>
+</body>
+<!--模板渲染-->
+<script type="text/html" id="tplProDisc">
+    {{each result}}
+    <h3>
+        {{$value.productName}}
+    </h3>
+    <div class="info">
+        <span>{{$value.productFrom}} </span>
+        <span>{{$value.productTime}} </span>
+        <span>{{$value.productTips}}</span>
+    </div>
+    <div class="fonts">
+        {{#$value.productImgLg}}
+        <p>{{$value.productInfo}}</p>
+        <p>{{$value.productInfo1}}</p>
+        {{#$value.productImgLg}}
+    </div>
+    {{/each}}
+</script>
+<script src="js/common.js"></script>
+<script src="js/product.js"></script>
+</html>

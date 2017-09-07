@@ -1,0 +1,347 @@
+/*------------- S reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+@charset "utf-8";
+html {
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html * {
+  outline: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  /*设置所有的盒子的宽度以边框开始计算*/
+  -webkit-box-sizing: border-box;
+  /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+  box-sizing: border-box;
+}
+html,
+body {
+  background: #f7f7f7;
+  color: #5a5a5a;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  /*在移动端特殊的设置*/
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+ins,
+a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+a:hover {
+  color: #5a5a5a;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  /*特殊的属性定义  清除浏览器给input自带的样式*/
+  -webkit-appearance: none;
+  /*组件默认的样式空*/
+}
+/*------------- E  reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+/*------------- S common css  也就是我们公用的css -------------*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after,
+.clearfix::before {
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.w33 {
+  width: 33.3333%;
+}
+.w50 {
+  width: 50%;
+}
+.w25 {
+  width: 25%;
+}
+/*------------- E common css  也就是我们公用的css -------------*/
+.hide {
+  display: none;
+}
+/*-------------- S 字体图标库 -------------*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), url('../fonts/iconfont.woff') format('woff'), url('../fonts/iconfont.ttf') format('truetype'), url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.proDisc {
+  background: #fff;
+  padding: 0 0.26666rem;
+  line-height: 1.5;
+}
+.proDisc h3 {
+  font-size: 18px;
+  margin: 0.13333rem 0 0.066665rem 0;
+  font-weight: 800;
+  color: #5a5a5a;
+}
+[data-dpr='2'] .proDisc h3 {
+  font-size: 36px;
+}
+[data-dpr="3"] .proDisc h3 {
+  font-size: 54px;
+}
+.proDisc .info span {
+  font-size: 12px;
+}
+[data-dpr='2'] .proDisc .info span {
+  font-size: 24px;
+}
+[data-dpr="3"] .proDisc .info span {
+  font-size: 36px;
+}
+.proDisc #disstorck {
+  width: 3.666575rem;
+  padding: 0 0.26666rem;
+  margin-left: 2.999925rem;
+  box-shadow: 0 0.066665rem 0.13333rem #cccccc;
+  border-radius: 0.13333rem;
+  margin-top: 0.66665rem;
+  font-size: 12px;
+}
+[data-dpr='2'] .proDisc #disstorck {
+  font-size: 24px;
+}
+[data-dpr="3"] .proDisc #disstorck {
+  font-size: 36px;
+}
+.proDisc #disstorck li {
+  padding: 0 0.26666rem;
+  border-bottom: 0.039999rem dashed #cccccc;
+  line-height: 2;
+}
+.proDisc #disstorck li span {
+  color: #000;
+}
+.proDisc #disstorck li strong {
+  color: #f27b04;
+  float: right;
+}
+.proDisc .fonts {
+  text-align: center;
+}
+.proDisc .fonts img:nth-child(1) {
+  vertical-align: middle;
+  width: 3.59991rem;
+  margin-bottom: 0.39999rem;
+  float: right;
+}
+.proDisc .fonts p {
+  text-align: left;
+}
+.proDisc .fonts img:nth-child(4) {
+  width: 100%;
+  margin-top: 0.26666rem;
+}
+.buy {
+  background: #fff;
+  padding-top: 0.53332rem;
+  padding-left: 0.53332rem;
+}
+.buy a {
+  display: block;
+  width: 8.906444rem;
+  height: 0.79998rem;
+  background: #ff9000;
+  border: 0.026666rem solid #ff7c03;
+  border-radius: 0.13333rem;
+  line-height: 0.746648rem;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+[data-dpr='2'] .buy a {
+  font-size: 28px;
+}
+[data-dpr="3"] .buy a {
+  font-size: 42px;
+}
+.weixinQRcode {
+  text-align: center;
+  padding-top: 1.133305rem;
+  background: #fff;
+}
+.comments {
+  background: #fff;
+  padding: 0.733315rem 0.26666rem 0;
+}
+.comments .tit {
+  font-size: 16px;
+  color: #000;
+}
+[data-dpr='2'] .comments .tit {
+  font-size: 32px;
+}
+[data-dpr="3"] .comments .tit {
+  font-size: 48px;
+}
+.comments .reply {
+  position: relative;
+}
+.comments .reply .form textarea {
+  width: 9.19977rem;
+  height: 2.986592rem;
+  border: 0.026666rem solid #cccccc;
+  margin: 0.199995rem 0 0.13333rem 0.13333rem;
+}
+.comments .reply .ctrl {
+  position: absolute;
+  left: 6.6665rem;
+  bottom: 0.26666rem;
+}
+.comments .reply .ctrl input {
+  width: 2.6666rem;
+  height: 1.06664rem;
+  background: #ff841d;
+  color: #fff;
+  font-size: 16px;
+}
+[data-dpr='2'] .comments .reply .ctrl input {
+  font-size: 32px;
+}
+[data-dpr="3"] .comments .reply .ctrl input {
+  font-size: 48px;
+}
+.comments .list ul li {
+  margin: 0.66665rem 0;
+  overflow: hidden;
+}
+.comments .list ul li .userimg {
+  float: left;
+  border-radius: 0.53332rem;
+  overflow: hidden;
+  margin-left: 0.26666rem;
+}
+.comments .list ul li .userimg img {
+  width: 1.06664rem;
+  height: 1.06664rem;
+}
+.comments .list ul li .con {
+  float: left;
+  margin-left: 0.39999rem;
+  width: 7.33315rem;
+}
+.comments .list ul li .con .name .username {
+  float: left;
+  color: #5997c0;
+}
+.comments .list ul li .con .name .time {
+  float: right;
+}
+.comments .list ul li .con .content {
+  font-size: 15px;
+  color: #000;
+  line-height: 2;
+}
+[data-dpr='2'] .comments .list ul li .con .content {
+  font-size: 30px;
+}
+[data-dpr="3"] .comments .list ul li .con .content {
+  font-size: 45px;
+}

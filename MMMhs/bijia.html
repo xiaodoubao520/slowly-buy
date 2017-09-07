@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <!--引入文件-->
+    <link rel="stylesheet" href="css/bijia.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src='lib/flexible/flexible.js'></script>
+    <script src='lib/flexible/flexible_css.js'></script>
+    <script src="lib/art/template.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <header>
+        <div class="left fl">
+            <a href='index.html'><img src="images/header_logo.png"></a>
+        </div>
+        <div class="right fr">
+            <a href='javascript:;'><img src="images/header_app.png"></a>
+        </div>
+    </header>
+    <!--搜索框-->
+    <div class="search clearfix">
+        <div class="search-bar fl">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="button fr">
+            <button>搜索</button>
+        </div>
+    </div>
+    <!--三级菜单-->
+    <div class="menu clearfix">
+        <div class="fl left threeMenu">
+            <a href="index.html">首页＞</a>
+            <!--<a href="category.html">全部分类＞</a>
+            <a href="javascript:;">电视＞</a>-->
+        </div>
+        <div class="fr right">
+            <button>筛选</button>
+        </div>
+    </div>
+    <!--产品展示-->
+    <div class="showPro">
+        <!--<div class="proName">长虹(CHANGHONG)55U3C 55英寸双64位4K安卓智能LED液晶电视</div>
+        <div class="pic">
+            <img src="images/tv.png">
+        </div>
+        <a href='javascript:;'><img src="images/sc.jpg"></a>-->
+    </div>
+    <!--比价功能栏-->
+    <div class="tab">
+        <ul>
+            <li class="w33 fl">比价购买</li>
+            <li class="w33 fl">产品参数</li>
+            <li class="w33 fl">评价(2322)</li>
+        </ul>
+    </div>
+    <!--比价购买-->
+    <div class="compareBuy">
+        <div class="top clearfix">
+            <a href='javascript:;'>
+                <img src="images/slogo.png">
+                <span>京东商城</span>
+            </a>
+            <button>去购买</button>
+            <span>￥758.00</span>
+        </div>
+        <div class="tip">
+            * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>
+    </div>
+    <!--网友评价-->
+    <div class="appraise">
+        <div class="header">网友评价</div>
+        <ul class="items">
+            <!--<li class="item">
+                <div class="info clearfix">
+                    <span class="fl name">b***r</span>
+                    <span class="fr time">2016/10/1</span>
+                </div>
+                <div class="from">购买自：京东商城</div>
+                <div class="disc">使用了一周整体不错</div>
+            </li>
+            -->
+        </ul>
+    </div>
+
+    <!--底部-->
+    <div class="footer">
+        <div class="linkTool">
+            <div class="login fl"><a href="javascript:;">登录</a></div>
+            <div class="register fl"><a href='javascript:;'>注册</a></div>
+            <div class="toTop fl">
+                <a href='javascript:;'>
+                    <img src="images/top.jpg">
+                    返回顶部
+                </a>
+            </div>
+        </div>
+        <div class="appDload">
+            <span class="dload">手机APP下载</span>
+            <span class="mobile">慢慢买手机版</span>
+            <span class="info">--掌上比价平台</span>
+        </div>
+        <div class="url">m.manmanbuy.com</div>
+    </div>
+</body>
+<!--模板引擎-->
+<!--三级菜单模板-->
+<script type="text/html" id="tplMenu">
+    {{each result}}
+    <a href="productlist.html?categoryid={{$value.categoryId}}&category={{$value.category}}&pageid=1">{{$value.category}}＞</a>
+    {{/each}}
+</script>
+<!--产品展示模板-->
+<script type="text/html" id="tplShowPro">
+    {{each result}}
+    <div class="proName">{{$value.productName}}</div>
+    <div class="pic">
+        {{#$value.productImg}}
+    </div>
+    <a href='javascript:;'><img src="images/sc.jpg"></a>
+    {{/each}}
+</script>
+<!--网友评论模板-->
+<script type="text/html" id="tplAppraise">
+    {{each result}}
+    <li class="item">
+        <div class="info clearfix">
+            <span class="fl name">{{$value.comName}}</span>
+            <span class="fr time">{{$value.comTime}}</span>
+        </div>
+        <div class="from">{{$value.comFrom}}</div>
+        <div class="disc">{{$value.comContent}}</div>
+    </li>
+    {{/each}}
+</script>
+<script src="js/common.js"></script>
+<script src="js/bijia.js"></script>
+</html>

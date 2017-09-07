@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品信息</title>
+    <!--引入文件-->
+    <link rel="stylesheet" href="css/productlist.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src='lib/flexible/flexible.js'></script>
+    <script src='lib/flexible/flexible_css.js'></script>
+    <script src="lib/art/template.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <header>
+        <div class="left fl">
+            <a href='index.html'><img src="images/header_logo.png"></a>
+        </div>
+        <div class="right fr">
+            <a href='javascript:;'><img src="images/header_app.png"></a>
+        </div>
+    </header>
+    <!--搜索框-->
+    <div class="search clearfix">
+        <div class="search-bar fl">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="button fr">
+            <button>搜索</button>
+        </div>
+    </div>
+    <!--三级菜单-->
+    <div class="menu clearfix">
+        <div class="fl left threeMenu">
+            <a href="index.html">首页＞</a>
+            <a href="category.html">全部分类＞</a>
+            <!--<a href="javascript:;">电视＞</a>-->
+        </div>
+        <div class="fr right">
+            <button>筛选</button>
+        </div>
+    </div>
+    <!--商品列表-->
+    <div class="products clearfix">
+        <!--<div class="product">
+            <div class="left fl">
+                <img src="images/tv.png" alt="">
+            </div>
+            <div class="right fr">
+                <p>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</p>
+                <span>￥1999.00</span>
+                <div><span>报价(6) </span><span>评论(2286)</span></div>
+            </div>
+        </div>-->
+        
+    </div>
+    <!--翻页功能栏-->
+    <div class="paging">
+        <button class="last">上一页</button>
+        <select name="page" id="selector">
+            <!--<option value="1">1/3</option>-->
+        </select>
+        <button class="next">下一页</button>
+    </div>
+    
+    <!--底部-->
+    <div class="footer">
+        <div class="linkTool">
+            <div class="login fl"><a href="javascript:;">登录</a></div>
+            <div class="register fl"><a href='javascript:;'>注册</a></div>
+            <div class="toTop fl">
+                <a href='javascript:;'>
+                    <img src="images/top.jpg">
+                    返回顶部
+                </a>
+            </div>
+        </div>
+        <div class="appDload">
+            <span class="dload">手机APP下载</span>
+            <span class="mobile">慢慢买手机版</span>
+            <span class="info">--掌上比价平台</span>
+        </div>
+        <div class="url">m.manmanbuy.com</div>
+    </div>
+    
+</body>
+<!--模板引擎-->
+<!--三级菜单模板-->
+<script type="text/html" id="tplMenu">
+    {{each result}}
+    <a href="javascript:;">{{$value.category}}＞</a>
+    {{/each}}
+</script>
+<!--商品列表模板-->
+<script type="text/html" id="tplProducts">
+    {{each result}}
+    <div class="product">
+        <a href='bijia.html?productid={{$value.productId}}' class="clearfix">
+            <div class="left fl">
+                {{#$value.productImg}}
+            </div>
+            <div class="right fr">
+                <p>{{$value.productName}}</p>
+                <span>{{$value.productPrice}}</span>
+                <div><span>{{$value.productQuote}} </span><span>{{$value.productCom}}</span></div>
+            </div>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<script src="js/common.js"></script>
+<script src="js/productlist.js"></script>
+</html>

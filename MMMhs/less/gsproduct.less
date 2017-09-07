@@ -1,0 +1,113 @@
+@import "base";
+//导航栏
+.nav{
+    background: #fff;
+    position: relative;
+    border-bottom: 2*@rem solid #dadada;
+    .navWrap{
+        ul{
+            padding-right: 85*@rem;
+            li{
+                float: left;
+                height: 85*@rem;
+                text-align: center;
+                line-height: 85*@rem;
+                a{
+                    line-height: 83*@rem;
+                    display: block;
+                    .font-size(14);
+                    color: #000;
+                    font-family:"微软雅黑";
+                }
+            }
+        }
+        .search{
+            width: 85*@rem;
+            height: 83*@rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+            .font-size(20);
+        }
+    }
+    .shop{
+        position: absolute;
+        width: 100%;
+        top: 87*@rem;
+        z-index: 3;
+        background: #fff;
+        ul{
+            li{
+                border-bottom: 2*@rem solid #dadada;
+                height: 85*@rem;
+                line-height: 83*@rem;
+                .font-size(14)  
+            }
+            a{
+                display:block;
+                color: #000;
+                font-family: "微软雅黑";
+                text-indent: 20*@rem;
+                span{
+                    .font-size(18);
+                    margin-right: 50*@rem;
+                    color: red;
+                }
+            }
+        }
+    }
+}
+//商品列表
+.products{
+    ul{
+        padding: 20*@rem 15*@rem;
+        li{
+            margin-bottom: 15*@rem;
+            position: relative;
+            // height: 400*@rem
+            .wrap{
+                display: block;
+                background: #fff;
+                width: 100%;
+                // text-align: center;
+                height: 460*@rem;
+                img{
+                    width: 300*@rem;
+                    height: 300*@rem;
+                }
+                p{
+                    display: -webkit-box;
+                    -webkit-line-clamp:1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    line-height: 3;
+                    margin: 0 5*@rem;
+                }
+                span{
+                    .font-size(20);
+                    color: #f8601d;
+                    line-height: 2;
+                }
+            }
+            .go{
+                position: absolute;
+                bottom: 20*@rem;
+                right: 20*@rem;
+                width: 125*@rem;
+                height: 55*@rem;
+                background: #ff9501;
+                color: #fff;
+                text-align: center;
+                line-height: 51*@rem;
+                border: 2*@rem solid #ff8b00;
+                border-radius: 5*@rem;
+            }
+        }
+        li:nth-child(2n-1){
+            padding-right: 7.5*@rem;
+        }
+        li:nth-child(2n){
+            padding-left: 7.5*@rem;
+        }
+    }
+}

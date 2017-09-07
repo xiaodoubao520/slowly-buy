@@ -1,0 +1,83 @@
+@import "base";
+//超值折扣推荐(最新优惠产品)
+.tuijian{
+    a{
+        display: block;
+    }
+    //产品列表
+    .products{
+        background: #fff;
+        .product{
+            border-bottom: 2px solid #e7e7e7;
+            padding-right: 30*@rem;
+            height: 255*@rem;
+            .pic{
+                width: 35%;
+                height: 255*@rem;
+                padding: 30*@rem 30*@rem;
+                img{
+                    height: 100%;
+                    text-align: center;
+                }
+            }
+            .info{
+                width: 65%;
+                position: relative;
+                height: 225*@rem;
+                div{
+                    padding-top: 35*@rem;
+                    // height: 180*@rem;
+                    .font-size(15);
+                    display: -webkit-box;
+                    -webkit-line-clamp:3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    span{
+                        color: @main-color;
+                    }
+                }
+                p{
+                    width: 100%;
+                    .font-size(12);
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+        
+    }
+}
+//翻页功能栏
+.paging{
+    padding-top: 20*@rem;
+    height:110*@rem;
+    background: #fff;
+    button{
+        width:165*@rem;
+        height: 70*@rem;
+        background: #d9d9d9;
+        .font-size(14);
+        color:#000;
+        border-radius: 10*@rem;
+    }
+    .last{
+        margin:0 43*@rem;
+    }
+    .next{
+        margin-left: 43*@rem;
+    }
+    select{
+        margin:0 43*@rem;
+        width: 150*@rem;
+        height: 70*@rem;
+        border: 2*@rem solid #b2b2b2;
+        .font-size(16);
+        option{
+            text-align: center;
+            width: 150*@rem;
+            height: 70*@rem;
+            .font-size(16);
+        }
+    }
+}
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>慢慢买--首页</title>
+    <!--引入文件-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src='lib/flexible/flexible.js'></script>
+    <script src='lib/flexible/flexible_css.js'></script>
+    <script src="lib/art/template.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <header>
+        <div class="left fl">
+            <a href='index.html'><img src="images/header_logo.png"></a>
+        </div>
+        <div class="right fr">
+            <a href='javascript:;'><img src="images/header_app.png"></a>
+        </div>
+    </header>
+    <!--搜索框-->
+    <div class="search clearfix">
+        <div class="search-bar fl">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="button fr">
+            <button>搜索</button>
+        </div>
+    </div>
+    <!--导航栏-->
+    <div class="nav clearfix">
+        <!--<div class="item w25 fl">
+            <a href='javascript:;'>
+                <img src="images/ic_search.png" alt="">
+                <p>比价搜索</p>
+            </a>
+            
+        </div>-->
+    </div>
+    <!--超值折扣推荐-->
+    <div class="tuijian">
+        <!--标题-->
+        <div class="header">
+            <span>超值折扣推荐</span>
+            <img class="fr" src="images/more.png">
+        </div>
+        <!--产品信息-->
+        <div class="products">
+            <!--<a href='javascript:;'>
+                <div class="product clearfix">
+                    <div class="pic fl">
+                        <img src="images/product.jpg">
+                    </div>
+                    <div class="info fl">
+                        <div>移动端凑单品：海天 鲜味 生抽 1.28L <span>10.9元</span></div>
+                        <p>京东商城|10-25 14:10
+                            <span class="fr">1</span>
+                        </p>
+                    </div>
+                </div>
+            </a>-->
+        </div>
+    </div>
+    <!--更多优惠-->
+    <div class="moreDiscount">
+        <a href='moneyctrl.html'>更多优惠信息>></a>
+    </div>
+    <!--品牌排行-->
+    <div class="ppph">
+        <div class="header">
+            <span>品牌排行</span>
+            <img class="fr" src="images/more.png">
+        </div>
+    </div>
+    <!--底部-->
+    <div class="footer">
+        <div class="linkTool">
+            <div class="login fl"><a href="javascript:;">登录</a></div>
+            <div class="register fl"><a href='javascript:;'>注册</a></div>
+            <div class="toTop fl">
+                <a href='javascript:;'>
+                    <img src="images/top.jpg">
+                    返回顶部
+                </a>
+            </div>
+        </div>
+        <div class="appDload">
+            <span class="dload">手机APP下载</span>
+            <span class="mobile">慢慢买手机版</span>
+            <span class="info">--掌上比价平台</span>
+        </div>
+        <div class="url">m.manmanbuy.com</div>
+    </div>
+    
+
+
+</body>
+<!--模板引擎-->
+<!--导航模板-->
+<script type="text/html" id="tplNav">
+    {{each result}}
+    <div class="item w25 fl">
+        <a href='{{$value.titlehref}}'>
+            {{#$value.img}}
+            <p>{{$value.name}}</p>
+        </a>   
+    </div>
+    {{/each}}
+</script>
+<!--产品模板-->
+<script type="text/html" id="tplProducts">
+    {{each result}}
+    <a href='product.html?productid={{$value.productId}}'>
+        <div class="product clearfix">
+            <div class="pic fl">
+                {{#$value.productImgSm}}
+            </div>
+            <div class="info fl">
+                <div>{{$value.productName}} <span>{{$value.productPinkage}}</span></div>
+                <p>{{$value.productFrom}}|{{$value.productTime}}
+                    <span class="fr">{{$value.productComCount}}</span>
+                </p>
+            </div>
+        </div>  
+    </a> 
+    {{/each}}
+</script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+</html>

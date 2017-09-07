@@ -1,0 +1,354 @@
+/*------------- S reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+@charset "utf-8";
+html {
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html * {
+  outline: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  /*设置所有的盒子的宽度以边框开始计算*/
+  -webkit-box-sizing: border-box;
+  /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+  box-sizing: border-box;
+}
+html,
+body {
+  background: #f7f7f7;
+  color: #5a5a5a;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  /*在移动端特殊的设置*/
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+ins,
+a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+a:hover {
+  color: #5a5a5a;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  /*特殊的属性定义  清除浏览器给input自带的样式*/
+  -webkit-appearance: none;
+  /*组件默认的样式空*/
+}
+/*------------- E  reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+/*------------- S common css  也就是我们公用的css -------------*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after,
+.clearfix::before {
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.w33 {
+  width: 33.3333%;
+}
+.w50 {
+  width: 50%;
+}
+.w25 {
+  width: 25%;
+}
+/*------------- E common css  也就是我们公用的css -------------*/
+.hide {
+  display: none;
+}
+/*-------------- S 字体图标库 -------------*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), url('../fonts/iconfont.woff') format('woff'), url('../fonts/iconfont.ttf') format('truetype'), url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+header {
+  position: relative;
+  background: #ff841d;
+  width: 100%;
+  height: 1.293301rem;
+  border-bottom: 1px solid #ff7502;
+}
+header .back {
+  position: absolute;
+  left: 0.39999rem;
+}
+header .back a {
+  display: block;
+  font-size: 20px;
+  line-height: 1.293301rem;
+  color: #fff;
+}
+[data-dpr='2'] header .back a {
+  font-size: 40px;
+}
+[data-dpr="3"] header .back a {
+  font-size: 60px;
+}
+header h1 {
+  color: #fff;
+  line-height: 1.293301rem;
+  font-size: 20px;
+  text-align: center;
+}
+[data-dpr='2'] header h1 {
+  font-size: 40px;
+}
+[data-dpr="3"] header h1 {
+  font-size: 60px;
+}
+header .left {
+  width: 4.93321rem;
+  height: 0.66665rem;
+  margin-left: 0.453322rem;
+  margin-top: 0.306659rem;
+}
+header .left img {
+  width: 100%;
+}
+header .right {
+  width: 0.906644rem;
+  height: 0.906644rem;
+  margin-right: 0.173329rem;
+  margin-top: 0.173329rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+header .right img {
+  width: 100%;
+}
+.search {
+  padding: 0.26666rem;
+  background: #fff;
+}
+.search .search-bar {
+  width: 75%;
+}
+.search .search-bar input {
+  width: 100%;
+  height: 0.79998rem;
+  background: #f1f1f1;
+  text-indent: 0.53332rem;
+  font-size: 13px;
+  border-radius: 0.39999rem;
+}
+[data-dpr='2'] .search .search-bar input {
+  font-size: 26px;
+}
+[data-dpr="3"] .search .search-bar input {
+  font-size: 39px;
+}
+.search .button {
+  width: 25%;
+  padding-left: 0.26666rem;
+}
+.search .button button {
+  width: 100%;
+  height: 0.79998rem;
+  border: 1px solid #ff7502;
+  border-radius: 0.39999rem;
+  background: #ff841d;
+  color: #fff;
+  font-size: 16px;
+}
+[data-dpr='2'] .search .button button {
+  font-size: 32px;
+}
+[data-dpr="3"] .search .button button {
+  font-size: 48px;
+}
+.footer .linkTool {
+  border-top: 1px solid #b8b8b8;
+  border-bottom: 1px solid #b8b8b8;
+  margin-top: 0.66665rem;
+  height: 0.879978rem;
+  text-align: center;
+  font-size: 14px;
+}
+[data-dpr='2'] .footer .linkTool {
+  font-size: 28px;
+}
+[data-dpr="3"] .footer .linkTool {
+  font-size: 42px;
+}
+.footer .linkTool a {
+  display: block;
+  padding-top: 0.199995rem;
+}
+.footer .linkTool .login {
+  width: 2.999925rem;
+  height: 0.879978rem;
+  border-right: 1px solid #b8b8b8;
+}
+.footer .linkTool .register {
+  width: 2.999925rem;
+  height: 0.879978rem;
+  border-right: 1px solid #b8b8b8;
+}
+.footer .linkTool .toTop {
+  width: 3.9999rem;
+  height: 0.879978rem;
+}
+.footer .linkTool .toTop img {
+  width: 0.39999rem;
+  height: 0.39999rem;
+}
+.footer .appDload {
+  text-align: center;
+  margin-top: 0.439989rem;
+}
+.footer .appDload .dload {
+  color: red;
+}
+.footer .appDload .mobile {
+  color: #000;
+}
+.footer .url {
+  text-align: center;
+  padding: 0.146663rem 0 0.466655rem;
+}
+.menu {
+  height: 0.999975rem;
+  line-height: 0.999975rem;
+  font-size: 14px;
+  color: #000;
+  border-top: 0.026666rem solid #cccccc;
+  border-bottom: 0.026666rem solid #cccccc;
+  background-image: linear-gradient(to bottom, #ffffff, #dbdbdb);
+}
+[data-dpr='2'] .menu {
+  font-size: 28px;
+}
+[data-dpr="3"] .menu {
+  font-size: 42px;
+}
+.menu .left {
+  padding-left: 0.213328rem;
+}
+.menu .left a {
+  display: block;
+  float: left;
+}
+.menu .right button {
+  font-size: 14px;
+  width: 1.666625rem;
+  height: 0.733315rem;
+  border-radius: 0.159996rem;
+  margin-right: 0.213328rem;
+  background-image: linear-gradient(to bottom, #dbdbdb, #ffffff);
+}
+[data-dpr='2'] .menu .right button {
+  font-size: 28px;
+}
+[data-dpr="3"] .menu .right button {
+  font-size: 42px;
+}

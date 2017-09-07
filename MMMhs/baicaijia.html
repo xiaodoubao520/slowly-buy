@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>白菜价</title>
+    <!--引入文件-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/baicaijia.css">
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src='lib/flexible/flexible.js'></script>
+    <script src='lib/flexible/flexible_css.js'></script>
+    <script src="lib/art/template.js"></script>
+    <script type="text/javascript" src="lib/iscroll/iscroll.js"></script>
+</head>
+<body onload="loaded()">
+     <!--头部-->
+    <header class="clearfix">
+        <div class="back fl">
+            <a href="index.html" class="iconfont">&#xe615;</a>
+        </div>
+        <h1>  			
+            白菜价-淘宝内部券
+        </h1>
+        <div class="right fr">
+            <a href='javascript:;'><img src="images/header_app.png"></a>
+        </div>
+    </header>
+    <!--导航栏-->
+    <div class="nav">
+        <div class="navWrap" id="wrapper">
+            <ul class="clearfix">
+                <!--<li><a href='javascript:;' class="current">全部</a></li>-->
+                <!--<li><a href='javascript:;'>全部</a></li>-->
+            </ul>
+            <div class="search iconfont">&#xe61e;</div>
+        </div>
+    </div>
+    <!--产品列表-->
+    <div class="products">
+        <!--<div class="product clearfix">
+            <div class="pic fl">
+                <img src="images/baicaiproduct.jpg">
+            </div>
+            <div class="info">
+                <p class="title"><span>[包邮]</span>多功能车载手机支架仪表台</p>
+            </div>
+        </div>
+        <div class="product clearfix">
+            <div class="pic fl">
+                <img src="images/baicaiproduct.jpg">
+            </div>
+            <div class="info">
+                <p class="title"><span>[包邮]</span>多功能车载手机支架仪表台</p>
+            </div>
+        </div>-->
+    </div>
+
+     <!--底部-->
+    <div class="footer">
+        <div class="linkTool">
+            <div class="login fl"><a href="javascript:;">登录</a></div>
+            <div class="register fl"><a href='javascript:;'>注册</a></div>
+            <div class="toTop fl">
+                <a href='javascript:;'>
+                    <img src="images/top.jpg">
+                    返回顶部
+                </a>
+            </div>
+        </div>
+        <div class="appDload">
+            <span class="dload">手机APP下载</span>
+            <span class="mobile">慢慢买手机版</span>
+            <span class="info">--掌上比价平台</span>
+        </div>
+        <div class="url">m.manmanbuy.com</div>
+    </div>
+</body>
+<!--模板渲染-->
+<!--菜单栏模板-->
+<script type="text/html" id="tplNav">
+    {{each result}}
+    <li><a href="javascript:void(0);" titleid = {{$value.titleId}}> {{$value.title}} </a></li>  
+    {{/each}}  
+</script>
+<!--产品信息模板渲染-->
+<script type="text/html" id="tplProducts">
+    {{each result}}
+    <div class="product">
+        <a href='javascript:;'>
+            <div class="pic fl">
+                {{#$value.productImg}}
+            </div>
+            <div class="info">
+                <p class="title">{{#$value.productName}}</p>
+                <div class="price">{{#$value.productPrice}}</div>
+                <div class="remain fl">{{#$value.productCouponRemain}}</div><br/>
+                <div class="discount">{{#$value.productCoupon}}</div>
+                <div class="link">{{#$value.productHref}}</div>
+            </div>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<script src="js/common.js"></script>
+<script src="js/baicaijia.js"></script>
+</html>
